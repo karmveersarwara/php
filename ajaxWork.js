@@ -48,7 +48,7 @@ function signUp(typ) {
   fd.append("password2", password2);
   console.log(name, password);
   $.ajax({
-    url: "./controller/server.php",
+    url: "./loginserver.php",
     method: "post",
     data: fd,
     processData: false,
