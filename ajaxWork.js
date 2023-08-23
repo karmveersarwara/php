@@ -1,4 +1,16 @@
-
+function showAlert(message, alertType, timeout) {
+  const alerts=$('<div id="alert_div" class="alert ' + alertType +' alert-dismissible fade in show " role="alert">' +
+    '<i class="fa fa-exclamation-circle me-2"></i> <span>' +message +"</span>" +
+    '<button  type="button" class="btn-close " data-bs-dismiss="alert" aria-label="Close" ></button>' +"</div>");
+  $(".alert_placeholder").append(alerts);
+  if (timeout || timeout === 0) {
+    setTimeout(function () {
+      alerts.alert("close");
+    }, timeout);
+  }
+  // var loadMore = document.getElementById("load_more");
+  // loadMore.click();
+}
 
 function showLogin() {
   $.ajax({
